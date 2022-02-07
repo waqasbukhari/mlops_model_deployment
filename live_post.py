@@ -22,7 +22,8 @@ data = {
 
 if __name__ == "__main__":
     response = requests.post(
-        " https://income-predictor-udacity.herokuapp.com/predict", data=json.dumps(data)
+        " https://income-predictor-udacity.herokuapp.com/predict",
+        data=json.dumps(data)
     )
     print(f"Status Code: {response.status_code}")
     print(response.json())

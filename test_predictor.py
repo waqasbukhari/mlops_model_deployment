@@ -55,7 +55,8 @@ def preds(model, X):
 
 
 def test_size(X):
-    assert X.iloc[:3,:].shape[0] == 3
+    assert X.iloc[:3, :].shape[0] == 3
+
 
 def test_compute_model_metrics_count(preds, y):
     metrics = compute_model_metrics(y, preds)

@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import pytest
 from sklearn.dummy import DummyClassifier
 from sklearn.model_selection import train_test_split
 
@@ -25,7 +24,7 @@ train, _ = train_test_split(data, test_size=0.20)
 X, y, _, _ = process_data(
                           train,
                           categorical_features=CAT_FEATURES,
-                          label="salary", training=True    )
+                          label="salary", training=True)
 
 model = DummyClassifier()
 model.fit(X, y)

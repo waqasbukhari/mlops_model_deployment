@@ -4,9 +4,9 @@ from sklearn.model_selection import train_test_split
 from data import process_data
 import pickle
 from model import (train_model,
-                      inference,
-                      compute_model_metrics,
-                      compute_metrics_on_slice)
+                   inference,
+                   compute_model_metrics,
+                   compute_metrics_on_slice)
 import pandas as pd  # import read_csv
 
 # Add code to load in the data.

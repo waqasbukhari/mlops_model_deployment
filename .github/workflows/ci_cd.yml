@@ -43,3 +43,5 @@ jobs:
       - name: Run pytest
         run: |
           python test_tmp.py
+          python test_predictor.py
+          python test_api.py

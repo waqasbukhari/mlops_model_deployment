@@ -33,7 +33,7 @@ jobs:
       - name: Showing working directory
         run: |
           ls -l
-          head -3 modified_census.csv
+          echo modified_census.csv
       - name: Install dependencies
         run: |
           pip install -r dev_requirements.txt

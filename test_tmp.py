@@ -3,10 +3,12 @@ import pandas as pd
 
 data_path = os.path.join(os.getcwd(), r"modified_census.csv")
 print(os.getcwd())
+print(os.listdir())
 print()
 data = pd.read_csv(data_path)
 print(data)
 print()
+print(data.iloc[0,0,])
 print(data.shape)
 print(data.head())
 print()

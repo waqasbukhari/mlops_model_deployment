@@ -25,4 +25,4 @@ if __name__ == "__main__":
         data=json.dumps(data)
     )
     print(f"Status Code: {response.status_code}")
-    print(response.json())
+    # print(response.json())

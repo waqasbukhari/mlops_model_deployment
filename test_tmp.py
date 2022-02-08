@@ -21,6 +21,8 @@ data_path = "modified_census.csv"
 data = pd.read_csv(data_path)
 print("Salary column in modified_census.csv")
 print("salary" in data.columns)
+print(data.columns)
+print()
 train, _ = train_test_split(data, test_size=0.20)
 X, y, _, _ = process_data(
                           train,

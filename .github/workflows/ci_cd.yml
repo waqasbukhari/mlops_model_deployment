@@ -37,3 +37,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run Linter
         run: flake8 
+      - name: Run pytest
+        run: |
+          python test_api.py
+          python test_predictor.py

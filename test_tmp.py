@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-data_path = os.path.join(os.getcwd(), r"modified_census.csv")
+data_path = os.path.join(os.getcwd(), r"ttt.csv")
 print(os.getcwd())
 print(os.listdir())
 print()

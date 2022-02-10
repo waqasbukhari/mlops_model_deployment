@@ -36,7 +36,7 @@ jobs:
           echo < modified_census.csv
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
+          /opt/hostedtoolcache/Python/3.9.7/x64/bin/python -m pip install --upgrade pip
           pip install -r dev_requirements.txt
           pip install -r requirements.txt
       - name: Run Linter

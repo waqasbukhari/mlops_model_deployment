@@ -2,4 +2,4 @@
     remote = s3remote
     autostage = true
 ['remote "s3remote"']
-    url = https://s3.amazonaws.com/udacity-student-waqas
+    url = s3://udacity-student-waqas

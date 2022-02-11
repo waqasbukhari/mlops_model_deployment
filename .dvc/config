@@ -1,5 +1,6 @@
 [core]
     autostage = true
     remote = s3remote
+    hardlink_lock = true
 ['remote "s3remote"']
     url = s3://udacity-student-waqas

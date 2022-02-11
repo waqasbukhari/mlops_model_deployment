@@ -1,5 +1,1 @@
 https://github.com/iterative/dvc/releases/download/2.0.18/dvc_2.0.18_amd64.deb
-heroku config:set AWS_ACCESS_KEY_ID=AKIAW45THVX54DY45FXT AWS_SECRET_ACCESS_KEY=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 AWS_REGION=us-east-1
-dvc config core.no_scm true
-dvc pull
-rm -r .dvc .apt/usr/lib/dvc

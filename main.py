@@ -45,6 +45,10 @@ app = FastAPI()
 
 if "DYNO" in os.environ and os.path.isdir(".dvc"):
     os.system("dvc remote add -df s3remote s3://udacity-student-waqas")
+    dvc_output = subprocess.run(
+        ["dvc", "pull"], capture_output=True, text=True)
+    print(dvc_output.stdout)
+    print(dvc_output.stderr)
     os.system("dvc config core.no_scm true")
     if os.system("dvc pull") != 0:
         exit("dvc pull failed")

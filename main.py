@@ -77,7 +77,7 @@ def welcome() -> str:
 
 @app.post("/predict")
 def predict(data: Input):
-    print("entered. ")
+    os.system("ls -l")
     df = pd.DataFrame.from_dict([data.dict(by_alias=True)])
     X, _, _, _ = process_data(
         df, categorical_features=CAT_FEATURES, training=False, encoder=ENCODER

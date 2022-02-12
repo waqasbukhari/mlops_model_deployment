@@ -44,7 +44,7 @@ CAT_FEATURES = [
 app = FastAPI()
 
 if "DYNO" in os.environ and os.path.isdir(".dvc"):
-    # os.system("dvc config core.hardlink_lock true")
+    os.system("dvc config core.hardlink_lock true")
     # os.system("dvc remote add -df s3remote s3://udacity-student-waqas")
     os.system("dvc config core.no_scm true")
     if os.system("dvc pull") != 0:

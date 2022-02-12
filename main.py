@@ -68,8 +68,6 @@ def startup_event():
     """
     Additionally load model and encoder on startup for faster predictions
     """
-    os.system("ls -l")
-
     with open("encoder.pkl", "rb") as f:
         global ENCODER
         ENCODER = joblib.load(f)
@@ -86,8 +84,9 @@ def welcome() -> str:
     return {"message": "Welcome to Income prediction"}
 
 
-@app.post("/predict", response_model=Output)
+@app.post("/predict")
 def predict(data: Input):
+    print("entered. ")
     df = pd.DataFrame.from_dict([data.dict(by_alias=True)])
     X, _, _, _ = process_data(
         df, categorical_features=CAT_FEATURES, training=False, encoder=ENCODER

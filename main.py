@@ -5,7 +5,6 @@ from pydantic import BaseModel, Field
 from data import process_data
 from model import inference
 import joblib
-import subprocess
 
 
 class Input(BaseModel):
@@ -48,13 +47,6 @@ if "DYNO" in os.environ and os.path.isdir(".dvc"):
     os.system("ls -l")
     os.system("dvc remote add -df s3remote s3://udacity-student-waqas")
     os.system("dvc config core.hardlink_lock true")
-    dvc_output = subprocess.run(["dvc", "pull"],
-                                capture_output=True,
-                                text=True)
-    print(dvc_output.stdout)
-    print(dvc_output.stderr)
-    if dvc_output.returncode != 0:
-        print("dvc pull failed")
     os.system("dvc pull")
     os.system("ls -l")
     os.system("dvc config core.no_scm true")

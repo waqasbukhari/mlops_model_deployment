@@ -68,6 +68,7 @@ def startup_event():
     """
     Additionally load model and encoder on startup for faster predictions
     """
+    os.system("ls -l")
 
     with open("encoder.pkl", "rb") as f:
         global ENCODER

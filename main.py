@@ -5,7 +5,6 @@ from pydantic import BaseModel, Field
 from data import process_data
 from model import inference
 import joblib
-import subprocess
 
 
 class Input(BaseModel):

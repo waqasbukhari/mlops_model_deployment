@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 from data import process_data
 from model import inference
 import joblib
+import json
 
 
 class Input(BaseModel):
@@ -86,4 +87,4 @@ def predict(data: Input):
     elif pred == 0:
         pred = "<=50K"
     # return {"Income": out_category}
-    return {"Income": pred}
+    return json.dumps({"Income": pred})

@@ -84,7 +84,7 @@ def welcome() -> str:
     return {"message": "Welcome to Income prediction"}
 
 
-@app.post("/predict")
+@app.post("/predict", response_model=Output)
 def predict(data: Input):
     print("entered. ")
     df = pd.DataFrame.from_dict([data.dict(by_alias=True)])

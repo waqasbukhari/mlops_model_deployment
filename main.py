@@ -65,9 +65,6 @@ def startup_event():
     with open("model.pkl", "rb") as f:
         global MODEL
         MODEL = joblib.load(f)
-    with open("lb.pkl", "rb") as f:
-        global LB
-        LB = joblib.load(f)
 
 
 @app.get("/")
@@ -75,7 +72,7 @@ def welcome() -> str:
     return {"message": "Welcome to Income prediction"}
 
 
-@app.post("/predict")
+@app.post("/predict", response_model=Output)
 def predict(data: Input):
     os.system("ls -l")
     df = pd.DataFrame.from_dict([data.dict(by_alias=True)])
